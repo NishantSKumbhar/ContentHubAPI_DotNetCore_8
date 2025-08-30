@@ -1,8 +1,11 @@
-﻿namespace ContentHubAPI.Models.Domain
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ContentHubAPI.Models.Domain
 {
     public class UserDomainModel
     {
-        public Guid UserID { get; set; }
+        [Key]
+        public Guid UserId { get; set; }
         public string UserName { get; set; } = string.Empty;
         public string UserEmail { get; set; } = string.Empty;
         public string UserPasswordHash { get; set; } = string.Empty;
